@@ -1,0 +1,20 @@
+# mk2 tools makefile
+
+FATC_INCLUDEARGS = /external:I W:\tools\x86\VS2022_BUILDTOOLS\include /external:I W:\tools\x86\WINKITS10\Include\10.0.22621.0\ucrt /external:I W:\tools\x86\WINKITS10\Include\10.0.22621.0\um /external:I W:\tools\x86\WINKITS10\Include\10.0.22621.0\shared
+FATC_ARGS = /Zc:wchar_t $(FATC_INCLUDEARGS) /external:W 4 /external:anglebrackets /std:c11
+all: build
+
+build:
+	ech BUILD: Building tools\x86\MK2
+	cd W:\tools\x86\MK2
+	cl fat.c  $(FATC_ARGS)
+	cd ..
+	ech BUILD: Done
+
+clean:
+	ech BUILD: Cleaning tools\x86\MK2
+	cd W:\tools\x86\MK2
+	del *.exe
+	del *.obj
+	cd ..
+	ech BUILD: Done
