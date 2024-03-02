@@ -1,9 +1,0 @@
-# Sources
-
-MODULEDIR=base\boot
-
-SOURCES=boot.asm
-
-OBJS=boot.obj
-	 
-BINS=boot.bin

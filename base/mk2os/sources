@@ -1,9 +1,0 @@
-# Sources
-
-MODULEDIR=base\mk2os
-
-ASMSOURCES=bootstrap.asm
-
-OBJS=bootstrap.obj
-	 
-BINS=bootstrap.LDR
